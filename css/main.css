@@ -1,0 +1,126 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html {
+	overflow-y: scroll;
+}
+
+body,
+html {
+    margin: 0px;
+    padding: 0px;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	font-smoothing: antialiased;
+}
+
+body {
+    background: #fff;
+    color: #111;
+    font-family: serif;
+    font-weight: lighter;
+	padding: 22px;
+    line-height: 1.5;
+	-webkit-text-size-adjust: none;
+
+}
+
+.content {
+	font-size:18px;
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width : 667px) {
+	.content {
+        font-size: 32px!important;
+    }
+	p.title {
+		font-size: 36px!important;
+	}
+	li {
+		margin-left: 50px!important;
+	}
+}
+
+img {
+    width: 100%;
+	max-width: 450px;
+    height: auto;
+}
+
+p.title {
+	font-size: 20px;
+}
+
+p.header {
+	font-weight:bold;
+}
+
+a:link {
+	color: #6495ED;
+	border-bottom:2px solid transparent;
+	padding-bottom:2px;
+	text-decoration:none;
+}
+
+a:active {
+	color: #4682B4;
+    border-bottom:2px solid;
+	padding-bottom:2px;
+	text-decoration:none;
+}
+a:visited {
+	color: #4682B4;
+	border-bottom:2px solid transparent;
+	padding-bottom:2px;
+	text-decoration:none;
+}
+
+a:hover {
+	color: #4682B4;
+	border-bottom:2px solid;
+	padding-bottom:2px;
+	text-decoration:none;
+ }
+ 
+#accordion input {
+	display: none;
+}
+#accordion label {
+	background: #eee;
+	border-radius: .25em;
+	cursor: pointer;
+	display: block;
+	margin-bottom: .125em;
+	padding: .25em 1em;
+	z-index: 20;
+	user-select: none;
+	-moz-user-select: none;
+}
+#accordion label:hover {
+	background: #ccc;
+}
+
+#accordion input:checked + label {
+	background: #ccc;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	margin-bottom: 0;
+}
+#accordion article {
+	background: #f7f7f7;
+	height:0px;
+	overflow:hidden;
+	z-index:10;
+}
+#accordion article p {
+	padding: 0.25em;
+	margin-left: 1em;
+}
+#accordion input:checked article {
+}
+#accordion input:checked ~ article {
+	border-bottom-left-radius: .25em;
+	border-bottom-right-radius: .25em;
+	height: auto;
+	margin-bottom: .125em;
+}
